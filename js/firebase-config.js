@@ -5,12 +5,12 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyCf8ccXGbqCIZ-yySiQvIHTeHLKTZ8nyH4",
+    authDomain: "kozygo-2f9d5.firebaseapp.com",
+    projectId: "kozygo-2f9d5",
+    storageBucket: "kozygo-2f9d5.firebasestorage.app",
+    messagingSenderId: "487931695263",
+    appId: "1:487931695263:web:dc605bf6bf9d0f203f12aa"
 };
 
 // Initialize Firebase
