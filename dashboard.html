@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
+    <nav>
+        <div class="logo-container">
+            <i class="fa-solid fa-leaf logo-icon"></i> 
+            <span>Zenith</span>
+        </div>
+        <div class="nav-right">
+            <select id="month-select"></select>
+            <select id="year-select"></select>
+            <button class="profile-btn" id="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+        </div>
+    </nav>
+
+    <div class="center-container" style="display: block;"> <div class="dashboard-card">
+            <div class="dashboard-header">
+                <h2 id="header-date">January</h2>
+                <p id="header-year" style="color: #64748b;">2026</p>
+                <p class="stats" id="daily-stats">Loading stats...</p>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="habit-table">
+                    <thead>
+                        <tr id="table-header-row">
+                            </tr>
+                    </thead>
+                    <tbody id="habit-body">
+                        </tbody>
+                </table>
+            </div>
+
+            <div>
+                <button class="add-btn" id="add-task-btn">
+                    <i class="fa-solid fa-plus"></i> Add new habit
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 All rights reserved</p>
+        <p>Made with <i class="fa-solid fa-heart heart"></i></p>
+    </footer>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
