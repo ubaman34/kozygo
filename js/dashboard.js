@@ -13,7 +13,7 @@ onAuthStateChanged(auth, (user) => {
     } else {
         currentUser = user;
         initDateSelectors();
-        loadHabits(); 
+        loadHabits();
     }
 });
 
@@ -70,7 +70,7 @@ function loadHabits() {
     headerRow.innerHTML += `<th>Progress</th>`; // Add Progress Header
 
     const tbody = document.getElementById('habit-body');
-    const q = query(collection(db, "habits"), where("uid", "==", currentUser.uid), orderBy("createdAt"));
+    const q = query(collection(db, "habits"), where("uid", "==", currentUser.uid));
 
     onSnapshot(q, (snapshot) => {
         tbody.innerHTML = "";
