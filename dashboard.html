@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenith Dashboard</title>
+    <title>KozyGo Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -12,16 +12,20 @@
     <nav>
         <div class="logo-container">
             <i class="fa-solid fa-leaf logo-icon"></i> 
-            <span>Zenith</span>
+            <span>KozyGo</span>
         </div>
         <div class="nav-right">
             <select id="month-select"></select>
             <select id="year-select"></select>
-            <button class="profile-btn" id="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+            
+            <div class="profile-trigger" id="profile-btn">
+                <img id="nav-profile-img" src="https://ui-avatars.com/api/?name=User&background=random" alt="Profile">
+            </div>
         </div>
     </nav>
 
-    <div class="center-container" style="display: block;"> <div class="dashboard-card">
+    <div class="center-container" style="display: block;"> 
+        <div class="dashboard-card">
             <div class="dashboard-header">
                 <h2 id="header-date">January</h2>
                 <p id="header-year" style="color: #64748b;">2026</p>
@@ -36,13 +40,59 @@
                     </thead>
                     <tbody id="habit-body">
                         </tbody>
+                    <tfoot id="add-row-footer">
+                        <tr>
+                            <td class="habit-name-cell">
+                                <div class="inline-add-container">
+                                    <input type="text" id="inline-habit-input" placeholder="+ Type new habit & Press Enter...">
+                                </div>
+                            </td>
+                            </tr>
+                    </tfoot>
                 </table>
             </div>
+        </div>
+    </div>
 
-            <div>
-                <button class="add-btn" id="add-task-btn">
-                    <i class="fa-solid fa-plus"></i> Add new habit
+    <div id="profile-modal" class="modal-overlay" style="display: none;"> 
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h3>My Profile</h3>
+                <span class="close-modal" id="close-profile">&times;</span>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="profile-upload-container" onclick="document.getElementById('file-input').click()">
+                    <img id="modal-profile-img" src="" alt="Profile">
+                    <div class="upload-overlay">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                </div>
+                <input type="file" id="file-input" accept="image/*" style="display: none;">
+
+                <div class="input-group">
+                    <label>Display Name</label>
+                    <input type="text" id="profile-name-input" placeholder="Your Name">
+                </div>
+
+                <div class="input-group">
+                    <label>Username</label>
+                    <div class="username-wrapper">
+                        <span class="at-symbol">@</span>
+                        <input type="text" id="profile-username-input" placeholder="username">
+                    </div>
+                </div>
+                
+                <button id="save-profile-btn" class="btn-primary" style="display: none; margin-top: 15px;">
+                    Save Changes
                 </button>
+
+                <button id="logout-btn-modal" class="btn-logout">
+                    Logout
+                </button>
+
             </div>
         </div>
     </div>
