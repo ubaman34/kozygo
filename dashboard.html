@@ -6,6 +6,7 @@
     <title>KozyGo Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
 
@@ -96,6 +97,23 @@
             </div>
         </div>
     </div>
+     
+    <div class="stats-container">
+    
+    <div class="stat-card">
+        <h3>📊 Monthly Progress</h3>
+        <div class="chart-wrapper">
+            <canvas id="progressChart"></canvas>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <h3>📝 Monthly Reflections</h3>
+        <textarea id="monthly-notes" placeholder="What did you learn this month? What can be improved?"></textarea>
+        <button id="save-notes-btn" class="save-btn">Save Notes</button>
+    </div>
+
+</div>
 
     <footer>
         <p>&copy; 2026 All rights reserved</p>
